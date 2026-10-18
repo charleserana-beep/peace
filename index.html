@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#071d1a">
+<meta name="description" content="Savory Haven Restaurant — fresh ingredients, authentic flavors, unforgettable dining. Explore our menu and get in touch.">
+<title>Savory Haven Restaurant | Good Food, Good Mood</title>
+<style>
+:root{--ink:#102521;--green:#061e1b;--green2:#0d302a;--gold:#f2b943;--cream:#fffaf0;--muted:#64716c;--white:#fff;--shadow:0 14px 40px #061e1b18}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--ink);background:#fbfaf6}button,input,textarea,select{font:inherit}button,a{ -webkit-tap-highlight-color:transparent}a{color:inherit;text-decoration:none}button{cursor:pointer}.hidden{display:none!important}
+header{position:sticky;top:0;z-index:50;background:#061e1bf5;color:white;border-bottom:1px solid #ffffff17;backdrop-filter:blur(12px)}.nav-wrap{max-width:1240px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:18px;padding:13px 22px}.brand{display:flex;align-items:center;gap:10px;min-width:max-content}.brand-mark{width:42px;height:42px;border:2px solid var(--gold);color:var(--gold);border-radius:50%;display:grid;place-items:center;font-size:22px}.brand-name{font-family:Georgia,serif;font-size:17px;font-weight:bold;letter-spacing:1px;line-height:1.1}.brand-sub{font-size:9px;letter-spacing:4px;color:var(--gold);margin-top:4px}.nav-links{display:flex;align-items:center;gap:22px}.nav-links button,.mobile-nav button{background:none;border:0;color:#f8f6ef;font-size:13px;padding:10px 0}.nav-links button.active,.nav-links button:hover{color:var(--gold);border-bottom:2px solid var(--gold)}.nav-actions{display:flex;align-items:center;gap:10px}.cart-btn{border:1px solid #ffffff44;background:transparent;color:white;padding:9px 12px;border-radius:7px;font-size:12px}.menu-toggle{display:none;border:1px solid #ffffff44;background:transparent;color:white;border-radius:8px;padding:8px 11px;font-size:20px}
+main{min-height:70vh}.page{display:none}.page.active{display:block}.hero{min-height:480px;color:white;display:flex;align-items:center;background:linear-gradient(90deg,#041a16ed 0%,#041a16b8 42%,#041a1630 100%),url('https://images.unsplash.com/photo-154料理?auto=format&fit=crop&w=1800&q=85');background-position:center;background-size:cover}
+.hero{background-image:linear-gradient(90deg,#041a16ed 0%,#041a16b8 42%,#041a1630 100%),url('https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1800&q=85')}
+.hero-content{max-width:1240px;width:100%;margin:auto;padding:68px 28px}.eyebrow{color:var(--gold);font-family:Georgia,serif;font-style:italic;letter-spacing:1px}.hero h1{font: bold clamp(38px,5vw,68px)/1.02 Georgia,serif;max-width:590px;margin:14px 0}.hero p{max-width:460px;color:#f0eee8;line-height:1.7}.btn{border:0;border-radius:7px;background:var(--gold);color:#14251e;font-weight:800;padding:13px 19px;display:inline-flex;justify-content:center;align-items:center;gap:8px}.btn:hover{filter:brightness(1.06);transform:translateY(-1px)}.btn-dark{background:var(--green);color:white}.btn-outline{background:transparent;border:1px solid #b6c3bb;color:var(--ink)}.features{display:grid;grid-template-columns:repeat(3,1fr);background:white;padding:24px max(20px,calc((100% - 1100px)/2));box-shadow:var(--shadow)}.feature{text-align:center;padding:8px 18px;border-right:1px solid #e7e8e3}.feature:last-child{border:0}.feature .emoji{font-size:25px}.feature strong{display:block;margin:6px 0;font-size:14px}.feature span{color:var(--muted);font-size:12px}
+.section{max-width:1240px;margin:auto;padding:62px 24px}.section-head{text-align:center;margin-bottom:30px}.section-head h2,.page-banner h1{font: bold clamp(30px,4vw,43px) Georgia,serif;margin:8px 0}.section-head p{color:var(--muted)}.page-banner{padding:52px 20px;text-align:center;color:white;background:linear-gradient(#061e1bc9,#061e1bc9),url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1600&q=80') center/cover}.page-banner p{margin:8px 0 0;color:#f5ead1}.about-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:34px;align-items:center}.about-img{width:100%;height:370px;object-fit:cover;border-radius:12px;box-shadow:var(--shadow)}.about-copy p{line-height:1.8;color:#586760}.pillars{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:32px}.pillar{background:white;border:1px solid #eee8db;border-radius:10px;padding:18px 12px;text-align:center}.pillar b{display:block;font-size:13px;margin-top:8px}.pillar span{font-size:22px}
+.filters{display:flex;justify-content:center;gap:9px;flex-wrap:wrap;margin:22px 0 28px}.filter-btn{border:1px solid #dfe3dc;background:white;color:#31413a;padding:9px 14px;border-radius:22px;font-size:12px}.filter-btn.active,.filter-btn:hover{background:var(--green);color:white;border-color:var(--green)}.product-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}.product-card{background:white;border:1px solid #eeece5;border-radius:11px;overflow:hidden;box-shadow:0 4px 14px #1025210a;display:flex;flex-direction:column;transition:.2s}.product-card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}.product-card img{width:100%;height:165px;object-fit:cover;background:#e8e5dc}.product-info{padding:14px;display:flex;flex-direction:column;flex:1}.product-info h3{font: bold 17px Georgia,serif;margin:0 0 7px}.product-info p{font-size:12px;color:var(--muted);line-height:1.5;margin:0 0 13px;flex:1}.product-bottom{display:flex;align-items:center;justify-content:space-between;gap:8px}.price{font-weight:800;font-size:14px}.add-btn{background:var(--green);color:white;border:0;border-radius:6px;padding:9px 10px;font-size:11px}.cart-bar{position:sticky;bottom:0;background:#061e1bf5;color:white;padding:13px 20px;display:flex;justify-content:center;align-items:center;gap:16px;z-index:20}.cart-bar button{padding:8px 14px}
+.video-feature{max-width:850px;margin:0 auto 24px;background:#fff;border-radius:12px;overflow:hidden;box-shadow:var(--shadow)}.video-placeholder{min-height:300px;display:grid;place-items:center;text-align:center;color:white;background:linear-gradient(#061e1b66,#061e1bcc),url('https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=1400&q=80') center/cover}.play{width:66px;height:66px;border-radius:50%;border:2px solid white;background:#ffffff22;color:white;font-size:24px}.video-caption{padding:16px 20px}.video-caption p{color:var(--muted);font-size:13px}.film-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.film-card{background:white;border-radius:10px;overflow:hidden;box-shadow:var(--shadow)}.film-card img{width:100%;height:150px;object-fit:cover}.film-card div{padding:14px}.film-card p{font-size:12px;color:var(--muted);line-height:1.5}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px}.contact-panel,.form-panel{background:white;border:1px solid #eee9de;border-radius:12px;padding:24px;box-shadow:var(--shadow)}.contact-panel h3,.form-panel h3{font: bold 22px Georgia,serif;margin-top:0}.contact-item{display:flex;gap:12px;margin:20px 0;align-items:flex-start}.contact-icon{width:36px;height:36px;display:grid;place-items:center;background:#fff2d0;border-radius:50%;flex:none}.contact-item small{display:block;color:var(--muted);margin-top:4px}.form-row{margin:13px 0}.form-row label{display:block;font-size:12px;font-weight:700;margin-bottom:6px}.form-row input,.form-row textarea,.form-row select{width:100%;padding:12px;border:1px solid #dfe2dc;border-radius:7px;background:#fff}.form-row textarea{min-height:120px;resize:vertical}.map-panel{margin-top:25px;border-radius:12px;overflow:hidden;min-height:170px;background:linear-gradient(135deg,#dce9d9,#f5f0d9);display:grid;place-items:center;text-align:center;color:#345148;padding:25px}
+.login-screen{min-height:calc(100vh - 70px);display:grid;place-items:center;padding:35px 18px;background:linear-gradient(#041a16aa,#041a16bb),url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1600&q=85') center/cover}.login-card{width:min(100%,400px);background:#061e1bf2;border:1px solid #e5b84665;color:white;border-radius:13px;padding:30px;box-shadow:0 20px 70px #0007;text-align:center}.login-card .brand{justify-content:center;margin-bottom:24px}.login-card h2{font: bold 27px Georgia,serif;margin:10px}.login-card p{color:#d4ddd7;font-size:13px;line-height:1.5}.login-card input{width:100%;padding:13px;border:1px solid #ffffff25;border-radius:7px;background:#ffffff12;color:white;margin:7px 0;outline-color:var(--gold)}.login-card .btn{width:100%;margin-top:10px}.login-card a{color:var(--gold);text-decoration:underline}.logout-card{max-width:520px;margin:65px auto;text-align:center;background:white;padding:42px 25px;border-radius:14px;box-shadow:var(--shadow)}.logout-card .check{font-size:54px;color:#dba62e}.notice{font-size:12px;color:#bdc9c2;margin-top:14px}
+footer{background:#061e1b;color:#e6ede7;padding:32px 22px 20px}.footer-inner{max-width:1200px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}.footer-brand{font: bold 18px Georgia,serif;color:white}.footer-inner p{font-size:12px;color:#c1cec6}.footer-bottom{max-width:1200px;margin:20px auto 0;border-top:1px solid #ffffff22;padding-top:17px;text-align:center;font-size:12px;color:#e3c16b}.toast{position:fixed;right:18px;bottom:75px;z-index:80;background:#102c25;color:white;padding:13px 18px;border-radius:8px;box-shadow:var(--shadow);max-width:90vw}
+@media(max-width:900px){.nav-links{gap:13px}.nav-links button{font-size:12px}.product-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.hero{min-height:430px}.about-grid{gap:22px}}
+@media(max-width:680px){.nav-wrap{padding:10px 12px;gap:8px;min-width:0}.brand{min-width:0;flex:1;gap:7px;overflow:hidden}.brand-mark{width:35px;height:35px;flex:0 0 35px;font-size:19px}.brand-name{display:block;font-size:clamp(10px,3.1vw,14px);letter-spacing:.4px;white-space:nowrap}.brand-sub{font-size:7px;letter-spacing:2px;white-space:nowrap}.nav-actions{gap:6px;flex:0 0 auto}.cart-btn{font-size:10px;padding:7px 8px;min-width:47px}.menu-toggle{display:block;padding:7px 10px;font-size:18px;flex:0 0 auto}.nav-links{display:none;position:absolute;top:100%;left:0;right:0;padding:10px 18px 17px;background:#061e1b;flex-direction:column;align-items:stretch;gap:0;border-top:1px solid #ffffff1a;box-shadow:0 12px 20px #0003}.nav-links.open{display:flex}.nav-links button{text-align:left;padding:12px 5px;border-bottom:1px solid #ffffff12}.nav-links button.active{border-bottom:1px solid #ffffff12}.hero{min-height:clamp(430px,78svh,590px);background-position:60% center}.hero-content{padding:42px 20px}.hero h1{font-size:clamp(34px,9vw,43px);overflow-wrap:normal;max-width:100%}.hero p{font-size:15px;line-height:1.55}.eyebrow{font-size:clamp(16px,4.5vw,22px)}.hero .btn{max-width:100%;padding:13px 16px;font-size:14px}.features{padding:14px 6px}.feature{padding:8px 4px}.feature strong{font-size:clamp(10px,2.9vw,12px)}.feature span{font-size:10px}.feature .emoji{font-size:21px}.section{padding:38px 14px}.section-head h2,.page-banner h1{font-size:clamp(27px,7vw,36px)}.about-grid,.contact-grid{grid-template-columns:minmax(0,1fr)}.about-img{height:240px}.pillars{grid-template-columns:repeat(2,minmax(0,1fr))}.product-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.product-card{min-width:0}.product-card img{height:clamp(105px,30vw,145px)}.product-info{padding:10px}.product-info h3{font-size:14px;overflow-wrap:anywhere}.product-info p{font-size:11px}.product-bottom{align-items:stretch;flex-direction:column;gap:8px}.add-btn{width:100%;padding:10px 7px}.film-grid{grid-template-columns:minmax(0,1fr)}.video-placeholder{min-height:220px}.contact-panel,.form-panel{padding:16px}.page-banner{padding:38px 14px}.cart-bar{justify-content:space-between;font-size:12px;padding:10px 12px;gap:8px}.footer-inner{justify-content:center;text-align:center}.footer-inner .brand{justify-content:center;width:100%}img,video,iframe{max-width:100%}body{overflow-x:hidden}}@media(max-width:360px){.nav-wrap{padding:9px 8px;gap:5px}.brand-mark{width:30px;height:30px;flex-basis:30px}.brand-name{font-size:10px}.brand-sub{font-size:6px;letter-spacing:1.5px}.cart-btn{min-width:40px;padding:6px 5px}.menu-toggle{padding:6px 8px}.hero-content{padding:36px 16px}.hero h1{font-size:32px}.features{padding-left:3px;padding-right:3px}.feature strong{font-size:9px}.feature span{font-size:9px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
+
+/* Accessibility/readability improvements: larger text on phones */
+@media(max-width:680px){
+  .brand-name{font-size:clamp(14px,4vw,17px);letter-spacing:.3px}
+  .brand-sub{font-size:9px;letter-spacing:2px}
+  .cart-btn{font-size:13px;padding:9px 10px}
+  .menu-toggle{font-size:24px;padding:8px 11px}
+  .nav-links button{font-size:16px;padding:14px 6px}
+  .hero-content{padding:44px 22px}
+  .hero h1{font-size:clamp(38px,9.4vw,48px);line-height:1.08}
+  .hero p{font-size:18px;line-height:1.65;max-width:36ch}
+  .eyebrow{font-size:clamp(19px,5vw,24px);line-height:1.4}
+  .hero .btn{font-size:17px;line-height:1.35;padding:16px 18px}
+  .features{padding:18px 7px}
+  .feature{padding:10px 5px}
+  .feature .emoji{font-size:25px}
+  .feature strong{font-size:clamp(12px,3.6vw,15px);line-height:1.35}
+  .feature span{font-size:13px;line-height:1.4;display:block}
+  .section{padding:42px 16px}
+  .section-head h2,.page-banner h1{font-size:clamp(30px,7.5vw,38px);line-height:1.15}
+  .section-head p,.page-banner p{font-size:16px;line-height:1.6}
+  .about-copy p{font-size:16px;line-height:1.8}
+  .pillar b{font-size:15px;line-height:1.4}
+  .filter-btn{font-size:14px;padding:10px 14px}
+  .product-grid{gap:12px}
+  .product-card img{height:clamp(120px,34vw,165px)}
+  .product-info{padding:12px}
+  .product-info h3{font-size:16px;line-height:1.3;overflow-wrap:normal}
+  .product-info p{font-size:14px;line-height:1.55}
+  .price{font-size:16px}
+  .add-btn{font-size:14px;padding:12px 8px;line-height:1.25}
+  .video-caption h3,.film-card h3{font-size:17px;line-height:1.4}
+  .video-caption p,.film-card p{font-size:15px;line-height:1.6}
+  .contact-panel h3,.form-panel h3{font-size:23px}
+  .contact-item{font-size:16px;line-height:1.5}
+  .contact-item small{font-size:14px;line-height:1.5}
+  .form-row label{font-size:15px}
+  .form-row input,.form-row textarea,.form-row select{font-size:16px;padding:14px}
+  .btn{font-size:16px;padding:14px 18px}
+  .login-card h2{font-size:29px}
+  .login-card p,.login-card input,.login-card .btn{font-size:16px;line-height:1.5}
+  .footer-brand{font-size:20px}
+  .footer-inner p{font-size:14px;line-height:1.6}
+  .footer-bottom{font-size:14px;line-height:1.6}
+  .cart-bar{font-size:14px;line-height:1.4}
+}
+@media(max-width:360px){
+  .brand-name{font-size:13px}
+  .brand-sub{font-size:8px;letter-spacing:1.5px}
+  .hero h1{font-size:36px}
+  .hero p{font-size:17px}
+  .feature strong{font-size:12px}
+  .feature span{font-size:12px}
+  .product-info h3{font-size:15px}
+  .product-info p{font-size:13px}
+}
+</style>
+</head>
+<body>
+<header id="site-header">
+ <div class="nav-wrap">
+  <a href="#home" class="brand" aria-label="Savory Haven home" onclick="navigate('home')"><span class="brand-mark">♨</span><span><span class="brand-name">SAVORY HAVEN</span><span class="brand-sub">RESTAURANT</span></span></a>
+  <nav class="nav-links" id="nav-links" aria-label="Main navigation">
+   <button data-page="home" onclick="navigate('home')">Home</button><button data-page="about" onclick="navigate('about')">About</button><button data-page="products" onclick="navigate('products')">Products</button><button data-page="films" onclick="navigate('films')">Films</button><button data-page="contact" onclick="navigate('contact')">Contact</button><button data-page="logout" onclick="navigate('logout')">Logout</button>
+  </nav>
+  <div class="nav-actions"><button class="cart-btn" onclick="showCart()">🛒 Cart (<span id="cart-count">0</span>)</button><button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation" aria-expanded="false" onclick="toggleMenu()">☰</button></div>
+ </div>
+</header>
+<main>
+<section class="page active" id="page-login">
+ <div class="login-screen"><form class="login-card" id="login-form">
+  <div class="brand"><span class="brand-mark">♨</span><span><span class="brand-name">SAVORY HAVEN</span><span class="brand-sub">RESTAURANT</span></span></div>
+  <h2>Welcome Back!</h2><p>Log in to explore our delicious menu and more.</p>
+  <input id="username" name="username" autocomplete="username" placeholder="♙  Username" required aria-label="Username">
+  <input id="password" name="password" type="password" autocomplete="current-password" placeholder="♙  Password" required aria-label="Password">
+  <button class="btn" type="submit">Login</button><p>Don't have an account? <a href="#contact" onclick="navigate('contact')">Contact us</a></p>
+  <div class="notice">Demo front-end login: enter any username and password.</div>
+ </form></div>
+</section>
+<section class="page" id="page-home">
+ <div class="hero"><div class="hero-content"><div class="eyebrow">Good Food · Good Mood</div><h1>Welcome to<br>Savory Haven<br>Restaurant</h1><p>Fresh ingredients. Authentic flavors. Unforgettable dining experience.</p><button class="btn" onclick="navigate('products')">Explore Our Menu　→</button></div></div>
+ <div class="features"><div class="feature"><div class="emoji">♨</div><strong>Delicious Food</strong><span>Always Fresh</span></div><div class="feature"><div class="emoji">⌂</div><strong>Cozy Ambiance</strong><span>Relax &amp; Enjoy</span></div><div class="feature"><div class="emoji">♡</div><strong>Great Service</strong><span>Your Satisfaction</span></div></div>
+ <div class="section"><div class="section-head"><div class="eyebrow">Made with care</div><h2>Something Delicious Awaits</h2><p>Discover guest favorites made fresh for you.</p></div><div class="product-grid" id="featured-grid"></div><div style="text-align:center;margin-top:28px"><button class="btn btn-dark" onclick="navigate('products')">View All 25 Menu Items</button></div></div>
+</section>
+<section class="page" id="page-about">
+ <div class="page-banner"><h1>About Us</h1><p>Our Story</p></div>
+ <div class="section"><div class="about-grid"><img class="about-img" src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1000&q=85" alt="Warm, welcoming restaurant interior" loading="lazy"><div class="about-copy"><div class="eyebrow">A seat at our table</div><h2 style="font: bold 34px Georgia,serif">The Story of Savory Haven</h2><p>Savory Haven Restaurant started with a simple vision — to bring people together through great food. What began as a small family kitchen has grown into a welcoming dining spot, known for quality ingredients, comforting favorites, and warm hospitality.</p><p>We are committed to serving fresh, delicious meals in a cozy and welcoming atmosphere. Because at Savory Haven, every meal is a special moment.</p><button class="btn" onclick="navigate('products')">Explore the Menu</button></div></div><div class="pillars"><div class="pillar"><span>♧</span><b>Fresh Ingredients</b></div><div class="pillar"><span>♡</span><b>Quality Food</b></div><div class="pillar"><span>♙</span><b>Friendly Staff</b></div><div class="pillar"><span>⌂</span><b>Great Atmosphere</b></div></div></div>
+</section>
+<section class="page" id="page-products">
+ <div class="page-banner"><h1>Our Menu</h1><p>Taste the best of our kitchen</p></div>
+ <div class="section"><div class="section-head"><h2>Made Fresh, Served with Love</h2><p>Choose a category or search for your favorite.</p></div>
+ <div style="max-width:440px;margin:0 auto"><input id="product-search" type="search" placeholder="Search menu items..." aria-label="Search menu items" style="width:100%;padding:12px 15px;border:1px solid #dfe2dc;border-radius:25px"></div>
+ <div class="filters" id="filters"></div><div class="product-grid" id="product-grid"></div>
+ </div><div class="cart-bar"><span>🛒 Your cart: <b id="cart-total">₱0.00</b> (<span id="cart-count-bottom">0</span> items)</span><button class="btn" onclick="showCart()">View Cart</button></div>
+</section>
+<section class="page" id="page-films">
+ <div class="page-banner"><h1>Our Restaurant Films</h1><p>A look at our story, food, and happy customers.</p></div>
+ <div class="section"><div class="video-feature"><div class="video-placeholder"><div><button class="play" onclick="notify('Add your restaurant video URL to make this player work.')">▶</button><p>Welcome to Savory Haven</p></div></div><div class="video-caption"><b>Savory Haven — Our Story</b><p>Discover the flavors, people, and moments that make every visit special. Replace this visual with your own restaurant video when ready.</p></div></div>
+ <div class="film-grid"><article class="film-card"><img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=700&q=80" alt="Chef preparing a meal" loading="lazy"><div><b>Behind the Scenes</b><p>A glimpse into the care and craft behind each plate.</p></div></article><article class="film-card"><img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=700&q=80" alt="Freshly prepared food" loading="lazy"><div><b>Our Signature Dishes</b><p>Fresh flavors and favorites from our kitchen.</p></div></article><article class="film-card"><img src="https://images.unsplash.com/photo-1528605248644-14dd04022da1?auto=format&fit=crop&w=700&q=80" alt="Friends sharing a meal" loading="lazy"><div><b>Happy Customers</b><p>Good food tastes even better when shared.</p></div></article></div></div>
+</section>
+<section class="page" id="page-contact">
+ <div class="page-banner"><h1>Get in Touch</h1><p>We'd love to hear from you!</p></div>
+ <div class="section"><div class="contact-grid"><div class="contact-panel"><h3>Contact Information</h3><div class="contact-item"><span class="contact-icon">⌖</span><div><b>Visit Us</b><small>123 Food Street, Flavor City, Philippines</small></div></div><div class="contact-item"><span class="contact-icon">☎</span><div><b>Call Us</b><small>+63 912 345 6789</small></div></div><div class="contact-item"><span class="contact-icon">✉</span><div><b>Email Us</b><small>savoryhaven@gmail.com</small></div></div><div class="contact-item"><span class="contact-icon">◷</span><div><b>Opening Hours</b><small>Open Daily · 10:00 AM – 10:00 PM</small></div></div><div class="map-panel"><div><div style="font-size:32px">📍</div><b>Savory Haven Restaurant</b><p style="font-size:12px">123 Food Street, Flavor City, Philippines<br>Replace this panel with your real map embed/address.</p></div></div></div>
+ <form class="form-panel" id="contact-form"><h3>Send Us a Message</h3><div class="form-row"><label for="contact-name">Your Name</label><input id="contact-name" name="name" required placeholder="Full name"></div><div class="form-row"><label for="contact-email">Your Email</label><input id="contact-email" name="email" type="email" required placeholder="you@example.com"></div><div class="form-row"><label for="contact-subject">Subject</label><input id="contact-subject" name="subject" placeholder="How can we help?"></div><div class="form-row"><label for="contact-message">Your Message</label><textarea id="contact-message" name="message" required placeholder="Write your message..."></textarea></div><button class="btn" type="submit">Send Message →</button><p style="font-size:11px;color:#7b8580">Demo form: connect a form service or backend to receive messages publicly.</p></form></div></div>
+</section>
+<section class="page" id="page-logout"><div class="section"><div class="logout-card"><div class="check">✓</div><h2 style="font: bold 30px Georgia,serif">You have been logged out!</h2><p>Thank you for visiting Savory Haven Restaurant.</p><button class="btn" onclick="navigate('login')">Login Again</button></div></div></section>
+</main>
+<footer><div class="footer-inner"><a class="brand" href="#home" onclick="navigate('home')"><span class="brand-mark">♨</span><span><span class="brand-name">SAVORY HAVEN</span><span class="brand-sub">RESTAURANT</span></span></a><p>Fresh ingredients · Authentic flavors · Warm hospitality</p><p><button style="border:0;background:none;color:#e6ede7;cursor:pointer" onclick="window.scrollTo({top:0,behavior:'smooth'})">Back to top ↑</button></p></div><div class="footer-bottom">Developed by: Charles Lambayan Erana · All rights reserved © 2026</div></footer>
+<div id="toast" class="toast hidden" role="status" aria-live="polite"></div>
+<script>
+const products = [
+{name:"Grilled Chicken",cat:"Main Dishes",price:150,desc:"Juicy grilled chicken with herbs and house seasoning.",img:"https://images.unsplash.com/photo-1532550907401-a500c9a57435?auto=format&fit=crop&w=700&q=80"},
+{name:"Beef Steak",cat:"Main Dishes",price:220,desc:"Tender steak served with a rich savory sauce.",img:"https://images.unsplash.com/photo-1600891964092-4316c288032e?auto=format&fit=crop&w=700&q=80"},
+{name:"Spaghetti Carbonara",cat:"Pasta",price:160,desc:"Creamy pasta tossed with parmesan and herbs.",img:"https://images.unsplash.com/photo-1612874742237-6526221588e3?auto=format&fit=crop&w=700&q=80"},
+{name:"Cheeseburger",cat:"Burgers",price:130,desc:"A juicy beef patty with cheese and fresh vegetables.",img:"https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=700&q=80"},
+{name:"French Fries",cat:"Sides",price:80,desc:"Golden, crispy fries with a pinch of sea salt.",img:"https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&fit=crop&w=700&q=80"},
+{name:"Iced Coffee",cat:"Drinks",price:70,desc:"Chilled coffee with a smooth, refreshing finish.",img:"https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=700&q=80"},
+{name:"Mango Shake",cat:"Drinks",price:90,desc:"Sweet mango blended into a cool creamy shake.",img:"https://images.unsplash.com/photo-1546173159-315724a31696?auto=format&fit=crop&w=700&q=80"},
+{name:"Chocolate Cake",cat:"Desserts",price:100,desc:"Rich chocolate cake for a sweet finish.",img:"https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=700&q=80"},
+{name:"Fish and Chips",cat:"Main Dishes",price:180,desc:"Crispy fish fillet with golden fries.",img:"https://images.unsplash.com/photo-1579208030886-b937da0925dc?auto=format&fit=crop&w=700&q=80"},
+{name:"Chicken Alfredo",cat:"Pasta",price:175,desc:"Fettuccine in a creamy parmesan sauce.",img:"https://images.unsplash.com/photo-1645112411341-6c4fd023714a?auto=format&fit=crop&w=700&q=80"},
+{name:"Margherita Pizza",cat:"Main Dishes",price:240,desc:"Classic pizza with tomato, mozzarella, and basil.",img:"https://images.unsplash.com/photo-1579751626657-72bc17010498?auto=format&fit=crop&w=700&q=80"},
+{name:"BBQ Ribs",cat:"Main Dishes",price:260,desc:"Slow-cooked ribs glazed with smoky barbecue sauce.",img:"https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=700&q=80"},
+{name:"Caesar Salad",cat:"Sides",price:110,desc:"Crisp greens, parmesan, croutons, and Caesar dressing.",img:"https://images.unsplash.com/photo-1550304943-4f24f54ddde9?auto=format&fit=crop&w=700&q=80"},
+{name:"Chicken Sandwich",cat:"Burgers",price:125,desc:"Seasoned chicken with lettuce and house sauce.",img:"https://images.unsplash.com/photo-1606755962773-d324e0a13086?auto=format&fit=crop&w=700&q=80"},
+{name:"Club Sandwich",cat:"Burgers",price:145,desc:"Triple-layer sandwich with chicken and fresh veggies.",img:"https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=700&q=80"},
+{name:"Pancakes",cat:"Desserts",price:95,desc:"Fluffy pancakes served with sweet syrup.",img:"https://images.unsplash.com/photo-1528207776546-365bb710ee93?auto=format&fit=crop&w=700&q=80"},
+{name:"Halo-Halo",cat:"Desserts",price:95,desc:"A colorful Filipino shaved-ice dessert favorite.",img:"https://images.unsplash.com/photo-1490474418585-ba9bad8fd0ea?auto=format&fit=crop&w=700&q=80"},
+{name:"Fresh Lemonade",cat:"Drinks",price:55,desc:"Fresh lemon flavor served ice cold.",img:"https://images.unsplash.com/photo-1513558161293-c28c8c9b6a5d?auto=format&fit=crop&w=700&q=80"},
+{name:"Fruit Smoothie",cat:"Drinks",price:100,desc:"A refreshing blend of seasonal fruit.",img:"https://images.unsplash.com/photo-1505252585461-04db1eb84625?auto=format&fit=crop&w=700&q=80"},
+{name:"Garlic Rice",cat:"Sides",price:45,desc:"Fragrant rice sautéed with golden garlic.",img:"https://images.unsplash.com/photo-1516684732162-798a0062be99?auto=format&fit=crop&w=700&q=80"},
+{name:"Sinigang na Baboy",cat:"Main Dishes",price:195,desc:"Comforting Filipino sour soup with pork and vegetables.",img:"https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=700&q=80"},
+{name:"Chicken Adobo",cat:"Main Dishes",price:170,desc:"Filipino-style chicken braised in a savory sauce.",img:"https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=700&q=80"},
+{name:"Pancit Canton",cat:"Main Dishes",price:140,desc:"Stir-fried noodles with vegetables and savory flavor.",img:"https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=700&q=80"},
+{name:"Vanilla Ice Cream",cat:"Desserts",price:65,desc:"Creamy vanilla ice cream, a timeless favorite.",img:"https://images.unsplash.com/photo-1501446529957-6226bd447c46?auto=format&fit=crop&w=700&q=80"},
+{name:"Iced Tea",cat:"Drinks",price:50,desc:"Lightly sweetened iced tea, served chilled.",img:"https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&fit=crop&w=700&q=80"}
+];
+let currentPage='login', activeCategory='All', cart={}, isLoggedIn=false, toastTimer;
+const money=n=>'₱'+Number(n).toLocaleString('en-PH',{minimumFractionDigits:2,maximumFractionDigits:2});
+function productCard(p){return `<article class="product-card"><img src="${p.img}" alt="${p.name}" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=700&q=80'"><div class="product-info"><h3>${p.name}</h3><p>${p.desc}</p><div class="product-bottom"><span class="price">${money(p.price)}</span><button class="add-btn" onclick="addToCart('${p.name.replace(/'/g,"\\'")}')">＋ Add to Cart</button></div></div></article>`}
+function renderProducts(){const search=(document.getElementById('product-search')?.value||'').toLowerCase();const filtered=products.filter(p=>(activeCategory==='All'||p.cat===activeCategory)&&(`${p.name} ${p.desc} ${p.cat}`.toLowerCase().includes(search)));document.getElementById('product-grid').innerHTML=filtered.map(productCard).join('')||'<p style="grid-column:1/-1;text-align:center;color:#64716c">No menu items found. Try another search.</p>'}
+function renderFilters(){const cats=['All',...new Set(products.map(p=>p.cat))];document.getElementById('filters').innerHTML=cats.map(c=>`<button class="filter-btn ${c===activeCategory?'active':''}" onclick="setCategory('${c}')">${c}</button>`).join('')}
+function setCategory(cat){activeCategory=cat;renderFilters();renderProducts()}
+function renderFeatured(){document.getElementById('featured-grid').innerHTML=products.slice(0,4).map(productCard).join('')}
+function addToCart(name){cart[name]=(cart[name]||0)+1;updateCart();notify(name+' added to cart.')}
+function updateCart(){const count=Object.values(cart).reduce((a,b)=>a+b,0);const total=products.reduce((sum,p)=>sum+p.price*(cart[p.name]||0),0);['cart-count','cart-count-bottom'].forEach(id=>{const e=document.getElementById(id);if(e)e.textContent=count});const totalEl=document.getElementById('cart-total');if(totalEl)totalEl.textContent=money(total)}
+function showCart(){const items=products.filter(p=>cart[p.name]);if(!items.length){notify('Your cart is empty. Add something delicious!');navigate('products');return}let msg='Your order:\\n'+items.map(p=>`${p.name} × ${cart[p.name]} — ${money(p.price*cart[p.name])}`).join('\\n')+'\\n\\nTotal: '+money(items.reduce((s,p)=>s+p.price*cart[p.name],0));if(confirm(msg+'\\n\\nPlace this demo order?')){notify('Thank you! This demo does not send orders to a restaurant.');cart={};updateCart()}}
+function navigate(page){if(page!=='login'&&page!=='logout'&&!isLoggedIn){page='login'}if(page==='logout'){isLoggedIn=false;currentPage='logout'}else if(page==='login'){currentPage='login'}else{currentPage=page}document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));const target=document.getElementById('page-'+currentPage);if(target)target.classList.add('active');document.querySelectorAll('[data-page]').forEach(b=>b.classList.toggle('active',b.dataset.page===currentPage));document.getElementById('nav-links').classList.remove('open');document.getElementById('menu-toggle').setAttribute('aria-expanded','false');document.getElementById('site-header').classList.toggle('hidden',currentPage==='login');window.scrollTo({top:0,behavior:'smooth'});if(currentPage==='products'){renderFilters();renderProducts()}}
+function toggleMenu(){const n=document.getElementById('nav-links');n.classList.toggle('open');document.getElementById('menu-toggle').setAttribute('aria-expanded',n.classList.contains('open')?'true':'false')}
+function notify(message){const t=document.getElementById('toast');t.textContent=message;t.classList.remove('hidden');clearTimeout(toastTimer);toastTimer=setTimeout(()=>t.classList.add('hidden'),3000)}
+document.getElementById('login-form').addEventListener('submit',e=>{e.preventDefault();isLoggedIn=true;notify('Welcome to Savory Haven!');navigate('home')});
+document.getElementById('contact-form').addEventListener('submit',e=>{e.preventDefault();notify('Thanks! Connect a form service to receive messages.');e.target.reset()});
+document.getElementById('product-search').addEventListener('input',renderProducts);
+renderFeatured();renderFilters();renderProducts();updateCart();
+</script>
+</body>
+</html>
